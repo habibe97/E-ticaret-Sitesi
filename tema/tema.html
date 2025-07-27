@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopify Benzeri E-Ticaret</title>
+    <link id="theme-link" rel="stylesheet" href="theme-modern.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Shopify Benzeri E-Ticaret</h1>
+        <label for="theme-selector">Tema Seç:</label>
+        <select id="theme-selector" aria-label="Tema Seçici">
+            <option value="theme-modern.css">Modern Tema</option>
+            <option value="theme-clean.css">Minimal Tema</option>
+            <option value="theme-dark.css">Karanlık Tema</option>
+            <option value="theme-floral.css">Çiçekli Tema</option>
+            <option value="theme-pastel.css">Pastel Tema</option>
+        </select>
+    </header>
+    <main>
+        <section class="products"></section>
+        <section class="cart">
+            <h2>Sepet</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Toplam: $0.00</p>
+            <button id="clear-cart">Sepeti Temizle</button>
+        </section>
+    </main>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="tema.js"></script>
+</body>
+
+</html>

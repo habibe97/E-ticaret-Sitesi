@@ -1,0 +1,242 @@
+/* Temel Stiller */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #111;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background: #111;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a,
+nav button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav button:hover {
+    color: #0f0;
+}
+
+.hero {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    text-align: center;
+    padding: 3rem 1rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: #f9f9f9;
+}
+
+.filters label {
+    font-weight: bold;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.cart {
+    padding: 2rem;
+    background: #fafafa;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#clear-cart {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #ff4444;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#clear-cart:hover {
+    background: #cc0000;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-remove-btn {
+    background: #cc0000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-left: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Modal Stilleri */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-content {
+    background: white;
+    padding: 1rem 2rem;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Karanlık Mod */
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+body.dark header {
+    background: #222;
+}
+
+body.dark .hero {
+    background: linear-gradient(135deg, #333, #555);
+}
+
+body.dark .filters {
+    background: #222;
+}
+
+body.dark .product {
+    background: #222;
+    border-color: #444;
+}
+
+body.dark .cart {
+    background: #222;
+}
+
+body.dark #clear-cart {
+    background: #bb4444;
+}
+
+body.dark #clear-cart:hover {
+    background: #991111;
+}
+
+body.dark .cart-remove-btn {
+    background: #991111;
+}

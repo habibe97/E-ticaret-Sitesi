@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopify Klon - ElektroMarket</title>
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+    <header>
+        <h1>ElektroMarket</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#products">Ürünler</a></li>
+                <li><a href="#cart">Sepet</a></li>
+                <li><button id="toggle-theme">Karanlık Mod</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Yeni Nesil Elektronik Ürünler</h2>
+        <p>En iyi fiyatlarla şimdi keşfedin!</p>
+    </section>
+
+    <section class="filters">
+        <label>
+            Kategori:
+            <select id="category-filter">
+                <option value="all">Tümü</option>
+                <option value="audio">Ses</option>
+                <option value="wearable">Giyilebilir</option>
+                <option value="accessories">Aksesuar</option>
+                <option value="gaming">Oyun</option>
+            </select>
+        </label>
+        <label>
+            Maksimum Fiyat: <span id="price-value">3000</span>₺
+            <input type="range" id="price-filter" min="0" max="3000" value="3000" />
+        </label>
+    </section>
+
+    <section id="products" class="product-list"></section>
+
+    <section id="cart" class="cart">
+        <h2>Sepetiniz</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Toplam: ₺0</p>
+        <button id="clear-cart">Sepeti Temizle</button>
+    </section>
+
+    <!-- Modal -->
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="" />
+            <h3 id="modal-name"></h3>
+            <p id="modal-desc"></p>
+            <p id="modal-price"></p>
+            <button id="modal-add-to-cart">Sepete Ekle</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

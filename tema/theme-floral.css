@@ -1,0 +1,98 @@
+body {
+    font-family: 'Georgia', serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #4b3b2b;
+    margin: 0;
+    padding: 1rem;
+    transition: background 0.5s ease;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    background: rgba(255, 248, 240, 0.8);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Palatino Linotype', serif;
+}
+
+select {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 2px solid #c98e65;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #fff6f0;
+    color: #7b5e47;
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product,
+.cart {
+    background: rgba(255, 248, 240, 0.85);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(203, 162, 132, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.product:hover,
+.cart:hover {
+    transform: scale(1.04);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(203, 162, 132, 0.5);
+}
+
+button {
+    background: #c98e65;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #a36e43;
+}
+
+#cart-items {
+    list-style: none;
+    padding-left: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    color: #5d473a;
+}
+
+#cart-items li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #d7bca9;
+}
+
+#cart-total {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #6e5a49;
+}
